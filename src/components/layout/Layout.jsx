@@ -1,4 +1,11 @@
-import { AppBar, Container, Toolbar, Typography, Button } from "@mui/material";
+import {
+  AppBar,
+  Container,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Layout = ({ children }) => {
@@ -28,28 +35,33 @@ const Layout = ({ children }) => {
       </header>
       {children}
       <footer>
-        <Container
-          maxWidth="md"
-          style={{ backgroundColor: "#263238" }}
-          sx={{ marginTop: "32px" }}
+        <Box
+          component="div"
+          sx={{
+            backgroundColor: "#263238",
+            marginTop: "32px",
+            width: "100%",
+          }}
         >
-          <Typography
-            variant="h6"
-            component="p"
-            color="secondary"
-            p={2}
-            textAlign="center"
-          >
-            ساخته شده با ❤️ توسط{" "}
-            <a
-              className="linkTag"
-              href="https://github.com/devCarllo"
-              target="_blank"
+          <Container maxWidth="md">
+            <Typography
+              variant="h6"
+              component="p"
+              color="secondary"
+              p={2}
+              textAlign="center"
             >
-              DevCarlo
-            </a>
-          </Typography>
-        </Container>
+              ساخته شده با ❤️ توسط{" "}
+              <a
+                className="linkTag"
+                href="https://github.com/devCarllo"
+                target="_blank"
+              >
+                DevCarlo
+              </a>
+            </Typography>
+          </Container>
+        </Box>
       </footer>
     </>
   );
