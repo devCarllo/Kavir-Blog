@@ -17,9 +17,9 @@ function BlogsPage() {
         <Typography component="h4" variant="p" mt={4} mb={1} p={1}>
           تمامی مقالات
         </Typography>
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
           {data.posts.map((item) => (
-            <Grid item xs={12} sm={6} md={4} key={item.id}>
+            <Grid item xs={12} sm={6} md={4} key={item.id} my={1}>
               <BlogCard data={item} />
             </Grid>
           ))}
